@@ -56,14 +56,14 @@ void Busy_check(void)
 
  
   void LCD_Out(unsigned char Command,unsigned char DATA)
-  {
+     {
 		 
 			RW &= RW_RESET;
 			if(Command == 0)
-					RS &= RS_RESET;
+			 	RS &= RS_RESET;
 			else 
-          RS |= RS_SET;
-	    __LCDDISPLAY__ = DATA;
+                        	RS |= RS_SET;
+	                __LCDDISPLAY__ = DATA;
 			EN |= EN_SET;
 			EN &= EN_RESET;
 	
