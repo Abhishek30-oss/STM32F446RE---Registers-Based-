@@ -2,19 +2,19 @@
 #include "lcd.h"
 
 
-unsigned char i,msg[]="STM32F446RE";
+unsigned char cnt,msg[]="STM32F446RE";
 
 int main()
 {
 	
-		GPIO_INIT();			//Hardware Initialization
+		GPIO_INIT();				//Hardware Initialization
 		LCD_Init();				//LCD_Init Initialization
 	    		
-	  for(i=0;msg[i]!='\0';i++)
+	  for(cnt=0;msg[cnt]!='\0';cnt++)
             {
                 Busy_check();
-								LCD_Out(1,msg[i]);
-		        }
+                LCD_Out(1,msg[cnt]);
+	    }
 	   while(1);  
 						
 }
